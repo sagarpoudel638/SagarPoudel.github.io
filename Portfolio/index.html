@@ -29,10 +29,10 @@
         background-repeat: no-repeat;
         background-size: cover;
       }
+
       /* background images*/
       .img1 {
         background-image: url("images/pexels-travis-blessing-1363876.jpg");
-        position: relative;
       }
 
       .img2 {
@@ -92,7 +92,7 @@
         margin: 20px 0px 20px 0px;
       }
       .text-intro {
-        margin: auto 5% auto 45%;
+        margin: auto 5% auto 30%;
       }
       .text-intro-heading {
         font-size: 3.90625vw;
@@ -116,18 +116,18 @@
       /*Introduction detail section*/
       .introduction-more {
         display: flex;
-        margin: 20px 0px 20px 0px;
+        margin: 20px 0px 20px 100px;
       }
       .text-intro-detail {
         margin: 10% 5% auto 5%;
       }
       .text-intro-heading-detail {
         font-size: 3.90625vw;
-        font-family: "Comic Sans MS", "Times New Roman", Times, serif;
+        font-family: "Comic Sans MS", "Times New Roman", "Times, serif";
       }
       .text-intro-subheading-detail {
         font-size: 1.3041666666666665vw;
-        font-family:cursive;
+        font-family: cursive;
         padding-left: 10%;
         padding-top: 10%;
       }
@@ -139,17 +139,97 @@
         box-shadow: 10px 10px;
         border-radius: 5%;
       }
+
+      .seperator {
+        display: flex;
+        margin: 50px 10px 0px 10px;
+      }
+      .horizontal-seperator {
+        margin: 40px auto auto auto;
+        width: 500px;
+        background-color: green;
+        height: 2px;
+      }
+      .seperator h3 a {
+        text-decoration: none;
+        font-size: 3.40625vw;
+        font-family: "Comic Sans MS", "Times New Roman", "Times, serif";
+        opacity: 0.7;
+        color: #818181;
+      }
+
+
+
+      
+      @media screen and (max-width: 360px) {
+        /* For mobile phones: */
+         .bg-image{ 
+           width: 100%;
+          background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+         
+        }
+        .header-background{
+          width:100%;
+          height: 400px;
+        flex-direction: column;
+        background-size: cover;
+        background-repeat: no-repeat;
+        position: relative;
+        }
+        
+        .bg-text {
+        background-color: rgb(0, 0, 0); /* Fallback color */
+        background-color: rgba(0, 0, 0, 0.4); /* Black w/opacity/see-through */
+        color: white;
+        font-weight: bold;
+        font-family: "Comic Sans MS";
+        text-shadow: #818181;
+        font-size: 20px;
+        border: 5px solid #f1f1f1;
+        position: fixed; /* Stay fixed */
+        top: 5%;
+        left: 12%;
+        transform: translate(-50%, -50%);
+        z-index: 0;
+        width: 18%;
+        padding: 2px;
+        text-align: center;
+      }
+
+
+      .bg-text-fixed {
+        background-color: rgb(0, 0, 0); /* Fallback color */
+        background-color: rgba(0, 0, 0, 0.4); /* Black w/opacity/see-through */
+        color: white;
+        font-weight: bold;
+        font-family: "Comic Sans MS";
+        text-shadow: #818181;
+        font-size: 20px;
+        border: 5px solid #f1f1f1;
+        position: absolute;
+        top: 20%;
+        left: 20%;
+        transform: translate(-50%, -50%);
+        z-index: 0;
+        width: 18%;
+        padding: 20px;
+        text-align: center;
+      }
+
+      }
     </style>
   </head>
-  <body
-    style="
-      background: linear-gradient(
-        90deg,
-        rgba(145, 144, 144, 1) 33%,
-        rgba(195, 192, 192, 1) 100%
-      );
-    "
-  >
+  <body style="background-color: rgba(195, 192, 192, 1)">
+    <div class="preloader">
+      <img class="helicopter" src="images/helicopter.svg" alt="helicopter" />
+      <h3>Going to Website</h3>
+      <img class="cloud1" src="images/cloud.svg" alt="cloud1" />
+      <img class="cloud2" src="images/cloud.svg" alt="cloud2" />
+      <img class="cloud3" src="images/cloud.svg" alt="cloud3" />
+      <img class="cloud4" src="images/cloud.svg" alt="cloud4" />
+    </div>
     <header>
       <script src="javascript/javascript.js"></script>
 
@@ -227,12 +307,16 @@
       </div>
       <div class="text-intro-detail">
         <div class="text-intro-heading-detail">Little more about me!</div>
-        <div class="text-intro-subheading-detail">
-          I am an IT Student.
-        </div>
+        <div class="text-intro-subheading-detail">I am an IT Student.</div>
       </div>
     </div>
     <!--End of little bit more about me section-->
+
+    <div class="seperator">
+      <div class="horizontal-seperator"></div>
+      <h3><a href="pages/Blog.html">Gallery</a></h3>
+      <div class="horizontal-seperator"></div>
+    </div>
 
     <!------------------------------------------------------------------------------------------------------------------------------>
     <footer class="footer-bg">
