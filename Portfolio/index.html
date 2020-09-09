@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Portfolio" />
+    <meta name="keywords" content="HTML" />
+    <meta name="author" content="Sagar Poudel" />
+    <link rel="stylesheet" href="css/style.css" />
+    <style>
+      /* Header section*/
+      .header-background {
+        display: flex;
+        width: 100%;
+        height: 1200px;
+        flex-direction: column;
+        background-size: cover;
+        background-repeat: no-repeat;
+        position: relative;
+      }
+
+      /* Header background image section*/
+      .bg-image {
+        width: auto;
+        /* Full height */
+        height: 50%;
+        /* Center and scale the image nicely */
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+      /* background images*/
+      .img1 {
+        background-image: url("images/pexels-travis-blessing-1363876.jpg");
+        position: relative;
+      }
+
+      .img2 {
+        background-image: url("images/pexels-pixabay-33109.jpg");
+      }
+
+      .img3 {
+        background-image: url("images/pexels-asad-photo-maldives-1450361.jpg");
+      }
+      .img4 {
+        background-image: url("images/pexels-krivec-ales-552785.jpg");
+      }
+      .img5 {
+        background-image: url("images/pexels-martin-damboldt-814499.jpg");
+      }
+      /* "Welcome" text*/
+      .bg-text {
+        background-color: rgb(0, 0, 0); /* Fallback color */
+        background-color: rgba(0, 0, 0, 0.4); /* Black w/opacity/see-through */
+        color: white;
+        font-weight: bold;
+        font-family: "Comic Sans MS";
+        text-shadow: #818181;
+        font-size: 5.208333333333333vw;
+        border: 10px solid #f1f1f1;
+        position: fixed; /* Stay fixed */
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 0;
+        width: 36%;
+        padding: 20px;
+        text-align: center;
+      }
+      /* this class is added through javascript in order to make "welcome" position absolute  */
+      .bg-text-fixed {
+        background-color: rgb(0, 0, 0); /* Fallback color */
+        background-color: rgba(0, 0, 0, 0.4); /* Black w/opacity/see-through */
+        color: white;
+        font-weight: bold;
+        font-family: "Comic Sans MS";
+        text-shadow: #818181;
+        font-size: 80px;
+        border: 10px solid #f1f1f1;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 0;
+        width: 36%;
+        padding: 20px;
+        text-align: center;
+      }
+      /*Introduction section */
+      .introduction {
+        display: flex;
+        margin: 20px 0px 20px 0px;
+      }
+      .text-intro {
+        margin: auto 5% auto 45%;
+      }
+      .text-intro-heading {
+        font-size: 3.90625vw;
+        font-family: "Comic Sans MS", "Times New Roman", Times, serif;
+      }
+      .text-intro-subheading {
+        font-size: 1.2041666666666665vw;
+        opacity: 0.5;
+        padding-left: 10%;
+        padding-top: 5%;
+      }
+      /* introduction image image section */
+
+      .introduction-image img {
+        width: 250px;
+        height: 250px;
+        box-shadow: 10px 10px;
+        border-radius: 5%;
+      }
+
+      /*Introduction detail section*/
+      .introduction-more {
+        display: flex;
+        margin: 20px 0px 20px 0px;
+      }
+      .text-intro-detail {
+        margin: 10% 5% auto 5%;
+      }
+      .text-intro-heading-detail {
+        font-size: 3.90625vw;
+        font-family: "Comic Sans MS", "Times New Roman", Times, serif;
+      }
+      .text-intro-subheading-detail {
+        font-size: 1.3041666666666665vw;
+        font-family:cursive;
+        padding-left: 10%;
+        padding-top: 10%;
+      }
+      /* introduction image image section */
+
+      .introduction-image-detail img {
+        width: 19.53125vw;
+        height: auto;
+        box-shadow: 10px 10px;
+        border-radius: 5%;
+      }
+    </style>
+  </head>
+  <body
+    style="
+      background: linear-gradient(
+        90deg,
+        rgba(145, 144, 144, 1) 33%,
+        rgba(195, 192, 192, 1) 100%
+      );
+    "
+  >
+    <header>
+      <script src="javascript/javascript.js"></script>
+
+      <div class="header-background">
+        <div class="bg-image img1">
+          <span
+            style="
+              font-size: 50px;
+              cursor: pointer;
+              margin: 0px 0px 0px 48%;
+              color: aliceblue;
+            "
+            onclick="openNav()"
+            >&#9776;
+          </span>
+        </div>
+
+        <div class="bg-image img2"></div>
+
+        <div class="bg-image img3"></div>
+        <div class="bg-image img4"></div>
+        <div class="bg-image img5"></div>
+
+        <div id="myNav" class="overlay">
+          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+            >&times;</a
+          >
+          <div class="overlay-content">
+            <a href="pages/Contact.html">Info/Contact</a>
+            <a href="pages/Blog.html">Blog</a>
+            <a href="pages/CV.html">CV/Resume</a>
+            <a href="index.html">Home</a>
+          </div>
+        </div>
+
+        <div class="bg-text" id="bg-text">WELCOME</div>
+
+        <script>
+          window.onscroll = function () {
+            myFunction();
+          };
+          var bgtext = document.getElementById("bg-text");
+
+          function myFunction() {
+            if (window.pageYOffset >= 750) {
+              // if scroll reach its position that is assigned to variable 850 then execute following
+              bgtext.classList.add("bg-text-fixed"); // add class bg-text-fixed(which is in CSS) to variable navigation
+            } else {
+              // if it doesn't reach its position do the following
+              bgtext.classList.remove("bg-text-fixed"); // remove class bg-text-fixed from variable navigation
+            }
+          }
+        </script>
+      </div>
+    </header>
+    <!-- ------------------------------------------------------------------------------------------------------------------------>
+    <!--This div is for image and text having introduction-->
+
+    <div class="introduction">
+      <div class="text-intro">
+        <div class="text-intro-heading">Hello! I am Sagar</div>
+        <div class="text-intro-subheading">
+          An ENTHUASTIC Person with a lot of Humour
+        </div>
+      </div>
+      <div class="introduction-image">
+        <img src="images/sagar-pp.jpg" />
+      </div>
+    </div>
+    <!--End of introduction div-->
+    <!--This div is for little bit more about me section-->
+    <div class="introduction-more">
+      <div class="introduction-image-detail">
+        <img src="images/introdetail.jpeg" />
+      </div>
+      <div class="text-intro-detail">
+        <div class="text-intro-heading-detail">Little more about me!</div>
+        <div class="text-intro-subheading-detail">
+          I am an IT Student.
+        </div>
+      </div>
+    </div>
+    <!--End of little bit more about me section-->
+
+    <!------------------------------------------------------------------------------------------------------------------------------>
+    <footer class="footer-bg">
+      <div class="copyright">© Copyright 2020</div>
+      <div class="contact">
+        <a href="pages/Contact.html">Info/Contact</a>
+      </div>
+      <div class="blog"><a href="pages/Blog.html">Blog</a></div>
+      <div class="cv"><a href="pages/CV.html">CV/Resume</a></div>
+      <div class="index"><a href="index.html">Home</a></div>
+    </footer>
+  </body>
+</html>
