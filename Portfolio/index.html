@@ -1,328 +1,81 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Home</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Portfolio" />
-    <meta name="keywords" content="HTML" />
-    <meta name="author" content="Sagar Poudel" />
-    <link rel="stylesheet" href="css/style.css" />
-    <style>
-      /* Header section*/
-      .header-background {
-        display: flex;
-        width: 100%;
-        height: 1200px;
-        flex-direction: column;
-        background-size: cover;
-        background-repeat: no-repeat;
-        position: relative;
-      }
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Portfolio</title>
+  <link rel="stylesheet" href="css/teststyle.css">
+  <link href="https://fonts.googleapis.com/css2?family=Mogra&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#welcome">Welcome</a></li>
+        <li><a href="#profile">Who I Am</a></li>
+        <li><a href="#journey">My Path</a></li>
+        <li><a href="#expertise">Expertise</a></li>
+        <li><a href="#portfolio">Showcase</a></li>
+        <li><a href="#connect">Connect</a></li>
+      </ul>
+    </nav>
+  </header>
 
-      /* Header background image section*/
-      .bg-image {
-        width: auto;
-        /* Full height */
-        height: 50%;
-        /* Center and scale the image nicely */
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-      }
+  <section class="intro">
+    <h1><span class="intro-im">I'M</span><br><span class="intro-name">SAGAR POUDEL</span><br><span class="intro-dev">FULL STACK DEVELOPER</span></h1>
+    <button class="learn-more-btn">Learn More</button>
+  </section>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Tortor at auctor urna nunc id cursus metus. Vestibulum rhoncus est pellentesque elit. Massa vitae tortor condimentum lacinia quis vel eros. Lacinia quis vel eros donec ac odio tempor orci. Enim ut sem viverra aliquet. Varius vel pharetra vel turpis nunc. Dolor sit amet consectetur adipiscing elit ut aliquam purus. Accumsan lacus vel facilisis volutpat est. Pharetra diam sit amet nisl suscipit adipiscing bibendum. Vel fringilla est ullamcorper eget nulla facilisi. Sapien nec sagittis aliquam malesuada bibendum arcu vitae elementum curabitur. Diam in arcu cursus euismod quis. Porttitor massa id neque aliquam vestibulum morbi blandit cursus. Tincidunt lobortis feugiat vivamus at augue eget arcu dictum varius. Ut tellus elementum sagittis vitae et leo duis ut diam.
 
-      /* background images*/
-      .img1 {
-        background-image: url("images/pexels-travis-blessing-1363876.jpg");
-      }
+Viverra orci sagittis eu volutpat odio facilisis mauris sit. Aenean pharetra magna ac placerat. Aenean et tortor at risus viverra adipiscing. Lectus mauris ultrices eros in cursus turpis massa. A condimentum vitae sapien pellentesque. Cursus vitae congue mauris rhoncus aenean vel elit scelerisque mauris. Vulputate ut pharetra sit amet aliquam id diam maecenas ultricies. Viverra accumsan in nisl nisi scelerisque eu ultrices vitae. Consectetur adipiscing elit pellentesque habitant morbi. Enim ut sem viverra aliquet eget sit amet. Consectetur adipiscing elit ut aliquam purus sit amet luctus. Velit laoreet id donec ultrices. Erat pellentesque adipiscing commodo elit. Elementum pulvinar etiam non quam lacus suspendisse faucibus. Egestas tellus rutrum tellus pellentesque eu. Aliquam faucibus purus in massa tempor nec feugiat nisl pretium. Neque gravida in fermentum et sollicitudin ac orci. Sollicitudin tempor id eu nisl. Arcu felis bibendum ut tristique et egestas quis ipsum.
 
-      .img2 {
-        background-image: url("images/pexels-pixabay-33109.jpg");
-      }
+Purus gravida quis blandit turpis. Non quam lacus suspendisse faucibus interdum posuere. Arcu cursus euismod quis viverra nibh cras pulvinar mattis. Accumsan in nisl nisi scelerisque eu ultrices vitae auctor. Facilisis sed odio morbi quis commodo odio aenean sed adipiscing. Venenatis tellus in metus vulputate eu scelerisque felis imperdiet proin. Viverra nam libero justo laoreet sit amet cursus sit. Donec pretium vulputate sapien nec. Sagittis purus sit amet volutpat consequat mauris. Tincidunt tortor aliquam nulla facilisi cras fermentum odio eu. Ullamcorper velit sed ullamcorper morbi tincidunt ornare. Accumsan sit amet nulla facilisi morbi tempus iaculis. Velit egestas dui id ornare arcu odio ut sem nulla. Facilisi morbi tempus iaculis urna id volutpat lacus.
 
-      
-      .img4 {
-        background-image: url("images/pexels-krivec-ales-552785.jpg");
-      }
-      
-      /* "Welcome" text*/
-      .bg-text {
-        background-color: rgb(0, 0, 0); /* Fallback color */
-        background-color: rgba(0, 0, 0, 0.4); /* Black w/opacity/see-through */
-        color: white;
-        font-weight: bold;
-        font-family: "Comic Sans MS";
-        text-shadow: #818181;
-        font-size: 5.208333333333333vw;
-        border: 10px solid #f1f1f1;
-        position: fixed; /* Stay fixed */
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        z-index: 0;
-        width: 36%;
-        padding: 20px;
-        text-align: center;
-      }
-      /* this class is added through javascript in order to make "welcome" position absolute  */
-      .bg-text-fixed {
-        background-color: rgb(0, 0, 0); /* Fallback color */
-        background-color: rgba(0, 0, 0, 0.4); /* Black w/opacity/see-through */
-        color: white;
-        font-weight: bold;
-        font-family: "Comic Sans MS";
-        text-shadow: #818181;
-        font-size: 80px;
-        border: 10px solid #f1f1f1;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        z-index: 0;
-        width: 36%;
-        padding: 20px;
-        text-align: center;
-      }
-      /*Introduction section */
-      .introduction {
-        display: flex;
-        margin: 20px 0px 20px 0px;
-      }
-      .text-intro {
-        margin: auto 5% auto 30%;
-      }
-      .text-intro-heading {
-        font-size: 3.90625vw;
-        font-family: "Comic Sans MS", "Times New Roman", Times, serif;
-      }
-      .text-intro-subheading {
-        font-size: 1.2041666666666665vw;
-        opacity: 0.5;
-        padding-left: 10%;
-        padding-top: 5%;
-      }
-      /* introduction image image section */
+Platea dictumst vestibulum rhoncus est pellentesque elit. Habitant morbi tristique senectus et netus et malesuada fames. Eget arcu dictum varius duis at consectetur. Neque convallis a cras semper auctor neque vitae tempus quam. Pellentesque id nibh tortor id aliquet lectus proin. Urna condimentum mattis pellentesque id. Lacus laoreet non curabitur gravida arcu ac tortor dignissim convallis. Proin sagittis nisl rhoncus mattis. Diam volutpat commodo sed egestas egestas fringilla phasellus. Mi eget mauris pharetra et ultrices neque ornare aenean. In cursus turpis massa tincidunt dui ut ornare lectus. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum dui. Pharetra magna ac placerat vestibulum lectus mauris ultrices. Enim eu turpis egestas pretium aenean pharetra magna ac. Sagittis id consectetur purus ut faucibus pulvinar elementum. Pulvinar sapien et ligula ullamcorper malesuada proin. Arcu non sodales neque sodales ut etiam sit amet nisl. Sed elementum tempus egestas sed sed risus pretium quam vulputate.
 
-      .introduction-image img {
-        width: 250px;
-        height: 250px;
-        /* box-shadow: 10px 10px;
-        border-radius: 5%; */
-      }
+Iaculis urna id volutpat lacus laoreet non. Donec pretium vulputate sapien nec sagittis aliquam malesuada. Lectus vestibulum mattis ullamcorper velit sed ullamcorper morbi tincidunt ornare. Enim diam vulputate ut pharetra sit amet aliquam id. Tellus mauris a diam maecenas sed enim ut sem. Nunc sed blandit libero volutpat sed cras ornare. Bibendum neque egestas congue quisque egestas diam. Id semper risus in hendrerit. Pharetra sit amet aliquam id diam maecenas. Quis hendrerit dolor magna eget. Amet mauris commodo quis imperdiet massa tincidunt nunc. Aliquet porttitor lacus luctus accumsan tortor posuere ac. Aliquam eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis. Sollicitudin nibh sit amet commodo nulla facilisi nullam vehicula. Volutpat est velit egestas dui id. Arcu dictum varius duis at consectetur lorem donec massa sapien. Pellentesque elit eget gravida cum sociis. Fringilla phasellus faucibus scelerisque eleifend donec pretium vulputate sapien nec. Sit amet nisl suscipit adipiscing bibendum est ultricies integer quis. Enim sit amet venenatis urna cursus eget nunc scelerisque.
 
-      /*Introduction detail section*/
-      .introduction-more {
-        display: flex;
-        margin: 20px 0px 20px 100px;
-      }
-      .text-intro-detail {
-        margin: 10% 5% auto 5%;
-      }
-      .text-intro-heading-detail {
-        font-size: 3.90625vw;
-        font-family: "Comic Sans MS", "Times New Roman", "Times, serif";
-      }
-      .text-intro-subheading-detail {
-        font-size: 1.3041666666666665vw;
-        font-family: cursive;
-        padding-left: 10%;
-        padding-top: 10%;
-      }
-      /* introduction image image section */
+Varius morbi enim nunc faucibus a. Aliquet nec ullamcorper sit amet risus nullam eget. Nunc mi ipsum faucibus vitae aliquet nec ullamcorper sit amet. Quam vulputate dignissim suspendisse in est. Purus viverra accumsan in nisl nisi scelerisque eu ultrices. Morbi non arcu risus quis varius. Id nibh tortor id aliquet lectus proin nibh. Erat imperdiet sed euismod nisi. Tellus rutrum tellus pellentesque eu tincidunt tortor aliquam. Dolor magna eget est lorem ipsum dolor sit amet consectetur. Eget sit amet tellus cras adipiscing enim. Enim facilisis gravida neque convallis a cras semper. Sit amet nisl suscipit adipiscing bibendum est. Purus semper eget duis at tellus at. Gravida in fermentum et sollicitudin ac. Venenatis tellus in metus vulputate eu scelerisque felis imperdiet. Sollicitudin ac orci phasellus egestas. Pretium fusce id velit ut tortor. Eros donec ac odio tempor orci dapibus ultrices in iaculis.
 
-      .introduction-image-detail img {
-        width: 19.53125vw;
-        height: auto;
-        /* box-shadow: 10px 10px;
-        border-radius: 5%; */
-      }
+Arcu non odio euismod lacinia at quis risus sed vulputate. Euismod lacinia at quis risus sed vulputate. Lacus sed turpis tincidunt id aliquet risus. In ornare quam viverra orci sagittis eu volutpat odio facilisis. Morbi tristique senectus et netus et malesuada fames ac turpis. Dignissim convallis aenean et tortor at risus viverra. Pulvinar sapien et ligula ullamcorper malesuada proin. Placerat vestibulum lectus mauris ultrices eros. Diam volutpat commodo sed egestas egestas fringilla phasellus. Euismod elementum nisi quis eleifend quam adipiscing vitae proin. Ultrices sagittis orci a scelerisque purus semper eget duis. Diam vel quam elementum pulvinar etiam non. Enim tortor at auctor urna nunc id cursus metus aliquam. Lectus magna fringilla urna porttitor rhoncus dolor purus. Eu turpis egestas pretium aenean pharetra magna ac. Et tortor consequat id porta nibh. Nisl condimentum id venenatis a condimentum vitae. In hendrerit gravida rutrum quisque non tellus orci ac auctor. Praesent tristique magna sit amet purus gravida quis.
 
-      .seperator {
-        display: flex;
-        margin: 50px 10px 0px 10px;
-      }
-      .horizontal-seperator {
-        margin: 40px auto auto auto;
-        width: 500px;
-        background-color: green;
-        height: 2px;
-      }
-      .seperator h3 a {
-        text-decoration: none;
-        font-size: 3.40625vw;
-        font-family: "Comic Sans MS", "Times New Roman", "Times, serif";
-        opacity: 0.7;
-        color: #818181;
-      }
+Sagittis id consectetur purus ut faucibus. Nunc congue nisi vitae suscipit tellus mauris a diam. Ultrices mi tempus imperdiet nulla malesuada pellentesque elit eget gravida. Tristique senectus et netus et malesuada. Dapibus ultrices in iaculis nunc sed augue lacus. Feugiat pretium nibh ipsum consequat. Accumsan tortor posuere ac ut consequat semper viverra. Sit amet venenatis urna cursus eget nunc scelerisque viverra. Ultrices sagittis orci a scelerisque. Pellentesque id nibh tortor id aliquet lectus proin. Morbi blandit cursus risus at ultrices mi tempus imperdiet. Enim diam vulputate ut pharetra sit amet aliquam id diam. Enim facilisis gravida neque convallis a cras semper auctor. Blandit volutpat maecenas volutpat blandit aliquam etiam erat. Bibendum ut tristique et egestas quis ipsum suspendisse ultrices gravida.
 
+Ornare arcu dui vivamus arcu felis bibendum ut. Purus in massa tempor nec feugiat. Sit amet porttitor eget dolor morbi non arcu risus quis. Tempor nec feugiat nisl pretium fusce id. Vehicula ipsum a arcu cursus. Pellentesque diam volutpat commodo sed egestas. Mattis pellentesque id nibh tortor id aliquet lectus proin nibh. Vitae turpis massa sed elementum tempus egestas sed sed. Sed nisi lacus sed viverra tellus in hac. Facilisi etiam dignissim diam quis enim lobortis. Morbi leo urna molestie at elementum eu. Lectus arcu bibendum at varius vel.
 
+Eu sem integer vitae justo eget magna fermentum. Vitae elementum curabitur vitae nunc. Potenti nullam ac tortor vitae purus faucibus. Gravida neque convallis a cras semper. Euismod elementum nisi quis eleifend quam adipiscing vitae proin sagittis. Ultrices vitae auctor eu augue ut lectus arcu bibendum at. Erat nam at lectus urna duis convallis. Neque aliquam vestibulum morbi blandit cursus risus at. Blandit libero volutpat sed cras ornare arcu. A erat nam at lectus urna duis convallis convallis tellus. Id neque aliquam vestibulum morbi blandit cursus risus at.
 
-      
-      @media screen and (max-width: 360px) {
-        /* For mobile phones: */
-         .bg-image{ 
-           width: 100%;
-          background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-         
-        }
-        .header-background{
-          width:100%;
-          height: 400px;
-        flex-direction: column;
-        background-size: cover;
-        background-repeat: no-repeat;
-        position: relative;
-        }
-        
-        .bg-text {
-        background-color: rgb(0, 0, 0); /* Fallback color */
-        background-color: rgba(0, 0, 0, 0.4); /* Black w/opacity/see-through */
-        color: white;
-        font-weight: bold;
-        font-family: "Comic Sans MS";
-        text-shadow: #818181;
-        font-size: 20px;
-        border: 5px solid #f1f1f1;
-        position: fixed; /* Stay fixed */
-        top: 5%;
-        left: 12%;
-        transform: translate(-50%, -50%);
-        z-index: 0;
-        width: 18%;
-        padding: 2px;
-        text-align: center;
-      }
+Malesuada pellentesque elit eget gravida cum sociis. Est ultricies integer quis auctor elit. Mus mauris vitae ultricies leo integer malesuada. Luctus accumsan tortor posuere ac ut consequat semper. Diam donec adipiscing tristique risus nec feugiat. Orci dapibus ultrices in iaculis. Condimentum lacinia quis vel eros donec. Sit amet luctus venenatis lectus magna fringilla urna porttitor. Nec dui nunc mattis enim ut. Id eu nisl nunc mi ipsum. In nisl nisi scelerisque eu ultrices vitae auctor. Vulputate odio ut enim blandit. Tortor posuere ac ut consequat semper. Fusce ut placerat orci nulla pellentesque dignissim enim sit. Sed cras ornare arcu dui vivamus arcu felis. Sit amet venenatis urna cursus. Et egestas quis ipsum suspendisse ultrices gravida. Neque sodales ut etiam sit amet nisl purus in.
 
+Mauris a diam maecenas sed enim ut sem viverra. Sed egestas egestas fringilla phasellus faucibus scelerisque eleifend donec pretium. Tortor pretium viverra suspendisse potenti. Nulla pellentesque dignissim enim sit amet. Tincidunt tortor aliquam nulla facilisi cras fermentum odio. Rhoncus est pellentesque elit ullamcorper dignissim cras. Nunc eget lorem dolor sed viverra ipsum. In mollis nunc sed id semper risus. Dui accumsan sit amet nulla facilisi morbi. Elementum nisi quis eleifend quam adipiscing. Sed ullamcorper morbi tincidunt ornare massa eget egestas. Neque aliquam vestibulum morbi blandit cursus risus at ultrices. Dui accumsan sit amet nulla facilisi morbi tempus iaculis urna. Nunc mi ipsum faucibus vitae aliquet nec. Odio ut sem nulla pharetra diam sit amet. Aliquet sagittis id consectetur purus ut.
 
-      .bg-text-fixed {
-        background-color: rgb(0, 0, 0); /* Fallback color */
-        background-color: rgba(0, 0, 0, 0.4); /* Black w/opacity/see-through */
-        color: white;
-        font-weight: bold;
-        font-family: "Comic Sans MS";
-        text-shadow: #818181;
-        font-size: 20px;
-        border: 5px solid #f1f1f1;
-        position: absolute;
-        top: 20%;
-        left: 20%;
-        transform: translate(-50%, -50%);
-        z-index: 0;
-        width: 18%;
-        padding: 20px;
-        text-align: center;
-      }
+Sed felis eget velit aliquet. Lectus arcu bibendum at varius. Accumsan lacus vel facilisis volutpat est velit egestas. Justo eget magna fermentum iaculis eu non diam phasellus. Aenean sed adipiscing diam donec adipiscing tristique risus nec feugiat. Dictum non consectetur a erat. Orci porta non pulvinar neque laoreet suspendisse interdum. Rhoncus dolor purus non enim. Purus in massa tempor nec feugiat. Vestibulum lectus mauris ultrices eros. Vestibulum lorem sed risus ultricies. Tempor commodo ullamcorper a lacus vestibulum sed arcu non. Nulla aliquet enim tortor at auctor urna nunc id. Vel pharetra vel turpis nunc eget lorem dolor sed. Consectetur lorem donec massa sapien faucibus et molestie ac. Non curabitur gravida arcu ac tortor dignissim convallis. Tellus rutrum tellus pellentesque eu tincidunt tortor aliquam nulla. Id porta nibh venenatis cras sed. Ac placerat vestibulum lectus mauris ultrices eros. Consectetur adipiscing elit duis tristique sollicitudin nibh sit amet.
 
-      }
-    </style>
-  </head>
-  <body style="background-color: rgba(195, 192, 192, 1)">
-    <div class="preloader">
-      <img class="helicopter" src="images/helicopter.svg" alt="helicopter" />
-      <h3>Going to Website</h3>
-      <img class="cloud1" src="images/cloud.svg" alt="cloud1" />
-      <img class="cloud2" src="images/cloud.svg" alt="cloud2" />
-      <img class="cloud3" src="images/cloud.svg" alt="cloud3" />
-      <img class="cloud4" src="images/cloud.svg" alt="cloud4" />
+Egestas sed sed risus pretium quam vulputate dignissim suspendisse in. Sapien faucibus et molestie ac feugiat. Congue eu consequat ac felis donec. Elementum tempus egestas sed sed risus. Sem et tortor consequat id porta nibh venenatis. Blandit volutpat maecenas volutpat blandit aliquam etiam erat velit scelerisque. Elit scelerisque mauris pellentesque pulvinar pellentesque habitant. Mi tempus imperdiet nulla malesuada pellentesque elit eget gravida cum. Aliquet risus feugiat in ante metus dictum at. Faucibus pulvinar elementum integer enim neque volutpat ac tincidunt. Velit aliquet sagittis id consectetur purus ut faucibus pulvinar elementum. Quis risus sed vulputate odio ut enim blandit volutpat.
+
+Id consectetur purus ut faucibus pulvinar elementum integer enim. Dignissim sodales ut eu sem integer vitae justo eget magna. In ante metus dictum at tempor commodo ullamcorper a. Auctor urna nunc id cursus metus aliquam eleifend mi. Nunc faucibus a pellentesque sit amet porttitor eget. Nascetur ridiculus mus mauris vitae ultricies leo. Venenatis lectus magna fringilla urna porttitor. Vitae sapien pellentesque habitant morbi tristique senectus et netus et. Pellentesque diam volutpat commodo sed. Leo urna molestie at elementum eu facilisis sed. Enim tortor at auctor urna nunc id cursus metus. Integer eget aliquet nibh praesent tristique. Sodales ut eu sem integer vitae. Habitant morbi tristique senectus et. Cras ornare arcu dui vivamus. Vel elit scelerisque mauris pellentesque. Vel eros donec ac odio. Senectus et netus et malesuada fames. Parturient montes nascetur ridiculus mus mauris vitae ultricies. Morbi blandit cursus risus at ultrices mi tempus.
+
+Integer enim neque volutpat ac tincidunt. Viverra mauris in aliquam sem fringilla. Vestibulum sed arcu non odio euismod lacinia. Tristique risus nec feugiat in fermentum posuere urna nec tincidunt. Scelerisque in dictum non consectetur. Elementum tempus egestas sed sed risus pretium quam vulputate dignissim. Lobortis mattis aliquam faucibus purus in. Rhoncus dolor purus non enim. Elit sed vulputate mi sit amet. Faucibus in ornare quam viverra orci sagittis eu volutpat. Id volutpat lacus laoreet non. Integer feugiat scelerisque varius morbi enim. Pretium quam vulputate dignissim suspendisse in est ante in. Aliquet bibendum enim facilisis gravida.
+
+Id venenatis a condimentum vitae sapien. Porttitor rhoncus dolor purus non enim praesent. Ut faucibus pulvinar elementum integer enim. Placerat vestibulum lectus mauris ultrices eros in. Id aliquet lectus proin nibh nisl. Urna nec tincidunt praesent semper feugiat nibh sed pulvinar. Odio pellentesque diam volutpat commodo sed egestas egestas. Arcu cursus vitae congue mauris rhoncus aenean vel elit. Praesent semper feugiat nibh sed pulvinar proin gravida hendrerit lectus. Massa massa ultricies mi quis. Condimentum vitae sapien pellentesque habitant. Odio tempor orci dapibus ultrices in iaculis nunc. Pretium nibh ipsum consequat nisl vel pretium. Pretium quam vulputate dignissim suspendisse in est ante in nibh. Integer malesuada nunc vel risus commodo viverra. Elementum nibh tellus molestie nunc non blandit massa enim. Tortor condimentum lacinia quis vel eros donec ac odio tempor. Elit pellentesque habitant morbi tristique senectus et netus et malesuada. Egestas sed tempus urna et pharetra pharetra. Orci ac auctor augue mauris augue.
+
+Eget duis at tellus at urna condimentum mattis pellentesque id. Ultrices in iaculis nunc sed. Praesent elementum facilisis leo vel fringilla. Facilisi morbi tempus iaculis urna id volutpat lacus. Sit amet est placerat in egestas. Tincidunt lobortis feugiat vivamus at augue eget arcu dictum. Vestibulum morbi blandit cursus risus at ultrices mi tempus. Consectetur adipiscing elit pellentesque habitant morbi tristique senectus et. Egestas sed sed risus pretium quam vulputate dignissim. Viverra ipsum nunc aliquet bibendum enim facilisis. Sed adipiscing diam donec adipiscing tristique risus nec. Pellentesque sit amet porttitor eget dolor morbi non arcu. Arcu vitae elementum curabitur vitae nunc sed. Scelerisque viverra mauris in aliquam. Suspendisse faucibus interdum posuere lorem ipsum. Turpis nunc eget lorem dolor sed viverra ipsum nunc aliquet. Lacus vel facilisis volutpat est velit egestas dui. Aenean pharetra magna ac placerat vestibulum lectus mauris ultrices.
+
+Id eu nisl nunc mi ipsum faucibus. Iaculis at erat pellentesque adipiscing commodo elit at. Sem viverra aliquet eget sit amet tellus cras. Magna fringilla urna porttitor rhoncus dolor purus. Potenti nullam ac tortor vitae. Facilisis volutpat est velit egestas dui id ornare arcu. Pulvinar etiam non quam lacus suspendisse faucibus interdum posuere lorem. Cum sociis natoque penatibus et magnis dis parturient. Dolor sit amet consectetur adipiscing. Massa tincidunt dui ut ornare lectus sit amet est. Consequat mauris nunc congue nisi vitae suscipit tellus mauris a. Vitae congue eu consequat ac felis donec. In fermentum posuere urna nec tincidunt praesent semper. Tincidunt tortor aliquam nulla facilisi cras fermentum odio eu feugiat. Adipiscing commodo elit at imperdiet dui accumsan sit. Faucibus a pellentesque sit amet. Quam pellentesque nec nam aliquam sem et tortor. Semper feugiat nibh sed pulvinar proin. Malesuada proin libero nunc consequat interdum varius. Arcu dictum varius duis at consectetur lorem donec massa sapien.
+
+Dapibus ultrices in iaculis nunc. Metus vulputate eu scelerisque felis imperdiet proin fermentum leo vel. Massa enim nec dui nunc mattis enim ut. Cursus sit amet dictum sit. Aliquam sem et tortor consequat id. Scelerisque eu ultrices vitae auctor eu augue ut lectus arcu. Faucibus ornare suspendisse sed nisi. Tincidunt arcu non sodales neque. Facilisis mauris sit amet massa. Proin fermentum leo vel orci porta non pulvinar neque laoreet. Pellentesque id nibh tortor id aliquet lectus proin nibh. Mauris ultrices eros in cursus. Tincidunt arcu non sodales neque sodales ut etiam sit amet.
+  </p>
+
+  <footer>
+    <p>&copy; 2024 Sagar Poudel. All rights reserved.</p>
+    <div class="social-icons">
+      <a href="#"><img src="linkedin-icon.png" alt="LinkedIn"></a>
+      <a href="#"><img src="github-icon.png" alt="GitHub"></a>
+      <a href="#"><img src="twitter-icon.png" alt="Twitter"></a>
     </div>
-    <header>
-      <script src="javascript/javascript.js"></script>
+  </footer>
 
-      <div class="header-background">
-        <div class="bg-image img1">
-          <span
-            style="
-              font-size: 50px;
-              cursor: pointer;
-              margin: 0px 0px 0px 48%;
-              color: aliceblue;
-            "
-            onclick="openNav()"
-            >&#9776;
-          </span>
-        </div>
-
-        <div class="bg-image img2"></div>
-
-        
-        <div class="bg-image img4"></div>
-        
-
-        <div id="myNav" class="overlay">
-          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
-            >&times;</a
-          >
-          <div class="overlay-content">
-            <a href="pages/Contact.html">Info/Contact</a>
-            <a href="pages/Blog.html">Blog</a>
-            <a href="pages/CV.html">CV/Resume</a>
-            <a href="index.html">Home</a>
-          </div>
-        </div>
-
-        <div class="bg-text" id="bg-text">WELCOME</div>
-
-        <script>
-          window.onscroll = function () {
-            myFunction();
-          };
-          var bgtext = document.getElementById("bg-text");
-
-          function myFunction() {
-            if (window.pageYOffset >= 750) {
-              // if scroll reach its position that is assigned to variable 850 then execute following
-              bgtext.classList.add("bg-text-fixed"); // add class bg-text-fixed(which is in CSS) to variable navigation
-            } else {
-              // if it doesn't reach its position do the following
-              bgtext.classList.remove("bg-text-fixed"); // remove class bg-text-fixed from variable navigation
-            }
-          }
-        </script>
-      </div>
-    </header>
-    <!-- ------------------------------------------------------------------------------------------------------------------------>
-    <!--This div is for image and text having introduction-->
-
-    <div class="introduction">
-      <div class="text-intro">
-        <div class="text-intro-heading">Hello! I am Sagar</div>
-        <div class="text-intro-subheading">
-          An ENTHUASTIC Person with a lot of Humour
-        </div>
-      </div>
-      <div class="introduction-image">
-        <img src="images/sagar-pp-transparent.png" />
-      </div>
-    </div>
-    <!--End of introduction div-->
-    <!--This div is for little bit more about me section-->
-    <div class="introduction-more">
-      <div class="introduction-image-detail">
-        <img src="images/introdetail-transparent.png" />
-      </div>
-      <div class="text-intro-detail">
-        <div class="text-intro-heading-detail">Little more about me!</div>
-        <div class="text-intro-subheading-detail">I am an IT Student.</div>
-      </div>
-    </div>
-    <!--End of little bit more about me section-->
-
-    <div class="seperator">
-      <div class="horizontal-seperator"></div>
-      <h3><a href="pages/Blog.html">Gallery</a></h3>
-      <div class="horizontal-seperator"></div>
-    </div>
-
-    <!------------------------------------------------------------------------------------------------------------------------------>
-    <footer class="footer-bg">
-      <div class="copyright">© Copyright 2020</div>
-      <div class="contact">
-        <a href="pages/Contact.html">Info/Contact</a>
-      </div>
-      <div class="blog"><a href="pages/Blog.html">Blog</a></div>
-      <div class="cv"><a href="pages/CV.html">CV/Resume</a></div>
-      <div class="index"><a href="index.html">Home</a></div>
-    </footer>
-  </body>
+  <script src="javascript/javascript.js"></script>
+</body>
 </html>

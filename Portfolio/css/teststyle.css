@@ -1,0 +1,135 @@
+/* Basic reset and styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #C2C0C0;
+  }
+  
+  header {
+    background: #333;
+    color: #fff;
+    padding: 10px 0;
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+  }
+  
+  nav ul li {
+    margin: 0 15px;
+  }
+  
+  nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+  }
+  
+  footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+  }
+  
+  .social-icons {
+    margin-top: 10px;
+  }
+  
+  .social-icons a {
+    margin: 0 10px;
+  }
+  
+  .social-icons img {
+    width: 30px;
+    vertical-align: middle;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    nav ul {
+      flex-direction: column;
+    }
+  
+    nav ul li {
+      margin: 10px 0;
+    }
+  
+    .intro-im {
+      font-size: 48px;
+    }
+  
+    .intro-name {
+      font-size: 72px;
+    }
+  
+    .intro-dev {
+      font-size: 48px;
+    }
+  }
+  
+  .intro {
+    text-align: left;
+    padding: 100px 20px;
+    padding-left: 10%;
+    color: #333;
+    overflow: hidden; /* To hide the overflow during animation */
+  }
+  
+  .intro h1 {
+    margin: 0;
+    line-height: 1.2;
+  }
+  
+  .intro-im, .intro-name, .intro-dev {
+    font-family: 'Mogra', cursive;
+    display: inline-block;
+    position: relative;
+    left: 0; /* Start on-screen */
+    transition: left 1s; /* Smooth transition */
+  }
+  
+  .intro-im {
+    font-size: 64px;
+    color: #3C3737;
+  }
+  
+  .intro-name {
+    font-size: 96px;
+    padding-left: 5%;
+    color: #666ACC;
+  }
+  
+  .intro-dev {
+    font-size: 64px;
+    padding-left: 20%;
+    color: #3C3737;
+  }
+  
+  .learn-more-btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 18px;
+    color: #fff;
+    background-color: #FF69B4; /* Pinkish color */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-left: 50%;
+  }
+  
+  .learn-more-btn:hover {
+    background-color: #FF1493; /* Darker pinkish color on hover */
+  }
+  
