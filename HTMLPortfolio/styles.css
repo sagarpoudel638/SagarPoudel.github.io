@@ -15,6 +15,10 @@ html {
   --lightcolor: white;
   --secondarycolor: 204, 200, 102;
 }
+
+
+
+
 .mainbodywrapper {
   padding-left: 2%;
   padding-right: 2%;
@@ -164,6 +168,8 @@ ul {
   flex-direction: column;
   flex-wrap: wrap;
   gap: 10px;
+  width: 100%;
+  height: auto;
   align-items: center;
 }
 
@@ -179,9 +185,12 @@ ul {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  flex-grow: 1;
   gap: 20px;
   padding-left: 5%;
   padding-top: 5%;
+  width: 100%;
+  justify-content: center;
 }
 .works-container .work {
   height: 512px;
